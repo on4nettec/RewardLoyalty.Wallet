@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Wallet.Core.Model\Wallet.Core.Model.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="On4Net.Extensions.Data" Version="10.0.0" />
+    <PackageReference Include="On4Net.Extensions.Exception" Version="10.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Schema\Scripts\00001-wallets.sql" />
+    <EmbeddedResource Include="Schema\Scripts\00002-transactions.sql" />
+    <EmbeddedResource Include="Schema\Scripts\00003-trans_details.sql" />
+    <EmbeddedResource Include="Schema\Scripts\00004-settlement_requests.sql" />
+  </ItemGroup>
+
+</Project>

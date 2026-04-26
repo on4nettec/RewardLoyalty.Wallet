@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "Wallet.Core.Api": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "applicationUrl": "http://localhost:5002",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "db__Address": "localhost",
+        "db__Port": "5432",
+        "db__UserName": "on4netdbuser",
+        "db__Password": "Password_123",
+        "db__Name": "reward_loyalty_wallet",
+        "db__JournalTable": "schema_versions",
+        "db__CommandTimeout": "1800"
+      }
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger",
+      "environmentVariables": {
+        "ASPNETCORE_HTTPS_PORTS": "8081",
+        "ASPNETCORE_HTTP_PORTS": "8080"
+      },
+      "publishAllPorts": true,
+      "useSSL": true
+    }
+  },
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:5002",
+      "sslPort": 0
+    }
+  }
+}
